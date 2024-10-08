@@ -1,0 +1,29 @@
+<AnalysisServicesUserConfiguration xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0">
+  <Configurations>
+    <Configuration>
+      <Name>Development</Name>
+      <Options>
+        <UserIDs>
+          <ConfigurationSetting>
+            <Id>CITS3401-2023-1 22607943 Project1</Id>
+            <Name>CITS3401-2023-1 22607943 Project1</Name>
+            <Value xsi:type="xsd:string">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAATepi3suZbUe1VOGBL4ZfewAAAABEAAAAQwBJAFQAUwAzADQAMAAxAC0AMgAwADIAMwAtADEAIAAyADIANgAwADcAOQA0ADMAIABQAHIAbwBqAGUAYwB0ADEAAAADZgAAwAAAABAAAAAE7qk/+zHNPqPWLvxRuyIsAAAAAASAAACgAAAAEAAAAMnAASSiAtKcaTsGWqFnHSU4AAAAkrDckOBs5VoSuLXDgNVyKnH5mETwPJ57Itpz707+J8++TmbegSbNry34a76nR6qcFzJq+E6Vhy4UAAAAO3FWBUR5Zm2aq6Yot/hPA7IBvyg=</Value>
+          </ConfigurationSetting>
+        </UserIDs>
+        <UserPasswords>
+          <ConfigurationSetting>
+            <Id>CITS3401-2023-1 22607943 Project1</Id>
+            <Name>CITS3401-2023-1 22607943 Project1</Name>
+            <Value xsi:type="xsd:string">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAATepi3suZbUe1VOGBL4ZfewAAAABEAAAAQwBJAFQAUwAzADQAMAAxAC0AMgAwADIAMwAtADEAIAAyADIANgAwADcAOQA0ADMAIABQAHIAbwBqAGUAYwB0ADEAAAADZgAAwAAAABAAAADMyR3C+NmXIIMJj8BUUpWkAAAAAASAAACgAAAAEAAAANr2C6RNYuRSNbgn/mmq3mQYAAAAiRIaT/qzaKbL3k2m0NQT0d/7od8Qh1RmFAAAAIFjhBVEXAkS190rCFIX58gKf/9b</Value>
+          </ConfigurationSetting>
+        </UserPasswords>
+        <TargetServer>labsql.csse.uwa.edu.au\UG_22607943</TargetServer>
+        <TargetDatabase>CITS3401Project1</TargetDatabase>
+        <StartObject>
+          <ObjectId></ObjectId>
+          <ObjectType>Current</ObjectType>
+        </StartObject>
+      </Options>
+    </Configuration>
+  </Configurations>
+</AnalysisServicesUserConfiguration>

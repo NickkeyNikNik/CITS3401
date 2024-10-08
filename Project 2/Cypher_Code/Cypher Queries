@@ -1,0 +1,248 @@
+/* 
+CITS3401 Project 2 
+Name: Nicodemus Ong
+Student Number: 22607943
+
+*** Queries for crime graph database
+Some queries comes with 2 suggested answers denoted by the //OR. 
+It is a secondary query that simplifies certain parts of the primary query that outputs the same results.
+Not necassary but a good learning point for simplifying/combining cypher queries while implementing my solution.
+
+*/
+
+/*
+1.How many crimes are recorded for a given crime type in a specified neighbourhood for a particular period?
+*/
+
+MATCH (cn:CrimeNumber)-[:HAS_CRIME_INFO]->(ci:Crime_Info {crime: 'LARCENY-FROM VEHICLE'})
+MATCH (cn)-[:IN_NEIGHBORHOOD]->(n:Neighborhood {neighborhood: 'Midtown'})
+MATCH (cn)-[:OCCURRED_ON]->(y:Year {year: '2012'})
+return count(cn);
+
+//OR 
+
+/*
+MATCH (n:Neighborhood {neighborhood: 'Midtown'}) <- [:IN_NEIGHBORHOOD] - (cn:CrimeNumber)-[:HAS_CRIME_INFO]->(ci:Crime_Info {crime: 'LARCENY-FROM VEHICLE'})
+MATCH (cn)-[:OCCURRED_ON]->(y:Year {year: '2012'})
+return count(cn);
+*/
+
+// Result: 8
+
+/*
+2. Find the neighbourhoods that share the same crime types, organise in decending order of the number of common crime types.
+*/
+
+MATCH (cn1:CrimeNumber)-[:HAS_CRIME_INFO]->(ci:Crime_Info)
+MATCH (cn1:CrimeNumber)-[:IN_NEIGHBORHOOD]->(n1:Neighborhood)
+WITH n1, COLLECT(DISTINCT ci.crime) AS crimeTypes
+MATCH (cn2:CrimeNumber)-[:HAS_CRIME_INFO]->(ci:Crime_Info)
+MATCH (cn2:CrimeNumber)-[:IN_NEIGHBORHOOD]->(n2:Neighborhood)
+WHERE n1 <> n2
+WITH n1, n2, COLLECT(DISTINCT ci.crime) AS otherCrimeTypes, crimeTypes
+WITH n1, n2, [crimeType IN crimeTypes WHERE crimeType IN otherCrimeTypes] AS commonCrimeTypes
+WITH n1, n2, SIZE(commonCrimeTypes) AS commonCrimeCount
+WHERE commonCrimeCount > 0
+RETURN n1.neighborhood AS neighborhood1, n2.neighborhood AS neighborhood2, commonCrimeCount
+ORDER BY commonCrimeCount DESC
+
+//OR
+
+/*
+MATCH (n1:Neighborhood) <- [:IN_NEIGHBORHOOD] - (cn1:CrimeNumber)-[:HAS_CRIME_INFO]->(ci:Crime_Info)
+WITH n1, COLLECT(DISTINCT ci.crime) AS crimeTypes
+MATCH (n2:Neighborhood) <- [:IN_NEIGHBORHOOD] - (cn2:CrimeNumber)-[:HAS_CRIME_INFO]->(ci:Crime_Info)
+WHERE n1 <> n2
+WITH n1, n2, COLLECT(DISTINCT ci.crime) AS otherCrimeTypes, crimeTypes
+WITH n1, n2, [crimeType IN crimeTypes WHERE crimeType IN otherCrimeTypes] AS commonCrimeTypes
+WITH n1, n2, SIZE(commonCrimeTypes) AS commonCrimeCount
+WHERE commonCrimeCount > 0
+RETURN n1.neighborhood AS neighborhood1, n2.neighborhood AS neighborhood2, commonCrimeCount
+ORDER BY commonCrimeCount DESC
+*/
+
+/* Results of the first 5:
+"Old Fourth Ward"	"Sylvan Hills"	7
+"Midtown"	"Sylvan Hills"	7
+"Downtown"	"Sylvan Hills"	7
+"Sylvan Hills"	"Old Fourth Ward"	7
+"Sylvan Hills"	"Midtown"	7
+*/
+
+/*
+3. Return the top 5 neighbourhoods for a specified crime for a specified duration.
+*/
+
+MATCH (ci:Crime_Info {crime: 'LARCENY-NON VEHICLE'})
+MATCH(cn:CrimeNumber)-[:HAS_CRIME_INFO]->(ci)
+MATCH(cn:CrimeNumber)-[:IN_NEIGHBORHOOD]->(n:Neighborhood)
+return n.neighborhood,COUNT(*) AS crime_count
+ORDER BY crime_count DESC
+LIMIT 5
+
+//OR
+
+/*
+MATCH (ci:Crime_Info {crime: 'LARCENY-NON VEHICLE'})
+MATCH (n:Neighborhood) <- [:IN_NEIGHBORHOOD] - (cn:CrimeNumber) - [:HAS_CRIME_INFO]->(ci)
+return n.neighborhood,COUNT(*) AS crime_count
+ORDER BY crime_count DESC
+LIMIT 5
+*/
+
+/* Results:
+"Downtown"	24
+"Midtown"	13
+"Lenox"	12
+"Berkeley Park"	12
+"Old Fourth Ward"	10
+*/
+
+/*
+4. Find the types of crimes for each property type.
+*/
+
+MATCH (cn:CrimeNumber)-[hci:HAS_CRIME_INFO]->(ci:Crime_Info)
+WITH hci.type AS propertyType, COLLECT(DISTINCT ci.crime) AS crimeTypes
+RETURN propertyType, crimeTypes
+
+/* Results:
+"house_number"	["LARCENY-NON VEHICLE", "AUTO THEFT", "BURGLARY-RESIDENCE", "LARCENY-FROM VEHICLE", "BURGLARY-NONRES", "ROBBERY-PEDESTRIAN", "ROBBERY-RESIDENCE", "AGG ASSAULT", "ROBBERY-COMMERCIAL", "HOMICIDE", "RAPE"]
+"shop"	["LARCENY-NON VEHICLE", "AUTO THEFT", "BURGLARY-RESIDENCE", "LARCENY-FROM VEHICLE", "BURGLARY-NONRES", "ROBBERY-PEDESTRIAN", "AGG ASSAULT"]
+"building"	["LARCENY-NON VEHICLE", "AUTO THEFT", "BURGLARY-RESIDENCE", "LARCENY-FROM VEHICLE", "BURGLARY-NONRES", "ROBBERY-PEDESTRIAN", "AGG ASSAULT", "ROBBERY-COMMERCIAL", "RAPE"]
+"amenity"	["LARCENY-NON VEHICLE", "AUTO THEFT", "BURGLARY-RESIDENCE", "LARCENY-FROM VEHICLE", "BURGLARY-NONRES", "ROBBERY-PEDESTRIAN", "ROBBERY-RESIDENCE", "AGG ASSAULT", "ROBBERY-COMMERCIAL", "HOMICIDE", "RAPE"]
+"road"	["LARCENY-NON VEHICLE", "AUTO THEFT", "BURGLARY-RESIDENCE", "LARCENY-FROM VEHICLE", "BURGLARY-NONRES", "ROBBERY-PEDESTRIAN", "ROBBERY-RESIDENCE", "AGG ASSAULT"]
+"tourism"	["LARCENY-NON VEHICLE", "AUTO THEFT", "LARCENY-FROM VEHICLE", "BURGLARY-NONRES"]
+"leisure"	["BURGLARY-RESIDENCE", "LARCENY-FROM VEHICLE"]
+"place"	["LARCENY-FROM VEHICLE"]
+"highway"	["LARCENY-FROM VEHICLE"]
+"office"	["LARCENY-FROM VEHICLE", "BURGLARY-NONRES", "HOMICIDE"]
+*/
+
+/*
+5. Which month of a specified year has the highest crime rate? Return one record each for each beat.
+*/
+
+MATCH (cn:CrimeNumber)-[o:OCCURRED_ON]->(y:Year {year: '2014'})
+MATCH (cn)-[:IN_BEAT]->(b:Beat)
+WITH cn, b.beat AS beat, y.year AS year, o.month AS month, COUNT(cn) AS crimeCount
+ORDER BY beat, crimeCount DESC
+WITH beat, COLLECT({cn: cn, year: year, month: month, crimeCount: crimeCount})[0] AS highestMonth
+RETURN beat, highestMonth.year AS year, highestMonth.month AS month, highestMonth.crimeCount AS crimeCount, highestMonth.cn AS crimeNumber
+
+//OR
+
+/*
+MATCH (b:Beat) <- [:IN_BEAT] - (cn:CrimeNumber) - [o:OCCURRED_ON] -> (y:Year {year: '2014'})
+WITH cn, b.beat AS beat, y.year AS year, o.month AS month, COUNT(cn) AS crimeCount
+ORDER BY beat, crimeCount DESC
+WITH beat, COLLECT({cn: cn, year: year, month: month, crimeCount: crimeCount})[0] AS highestMonth
+RETURN beat, highestMonth.year AS year, highestMonth.month AS month, highestMonth.crimeCount AS crimeCount, highestMonth.cn AS crimeNumber
+*/
+
+/* Results of the first 5:
+"102"	"2014"	"May"	1	
+{
+  "identity": 6839,
+  "labels": [
+    "CrimeNumber"
+  ],
+  "properties": {
+    "crimenumber": "141381245"
+  },
+  "elementId": "6839"
+}
+"103"	"2014"	"November"	1	
+{
+  "identity": 6968,
+  "labels": [
+    "CrimeNumber"
+  ],
+  "properties": {
+    "crimenumber": "143050939"
+  },
+  "elementId": "6968"
+}
+"104"	"2014"	"April"	1	
+{
+  "identity": 7069,
+  "labels": [
+    "CrimeNumber"
+  ],
+  "properties": {
+    "crimenumber": "141070241"
+  },
+  "elementId": "7069"
+}
+"106"	"2014"	"March"	1	
+{
+  "identity": 7211,
+  "labels": [
+    "CrimeNumber"
+  ],
+  "properties": {
+    "crimenumber": "140851967"
+  },
+  "elementId": "7211"
+}
+"107"	"2014"	"May"	1	
+{
+  "identity": 6809,
+  "labels": [
+    "CrimeNumber"
+  ],
+  "properties": {
+    "crimenumber": "141352246"
+  },
+  "elementId": "6809"
+}
+*/
+
+/*
+*** 2 additional queries
+*/
+
+/*
+6. Identify the months with the highest and lowest crime rates for a specified neighborhood for each year.
+*/
+
+MATCH (n:Neighborhood {neighborhood: 'Midtown'})<-[:IN_NEIGHBORHOOD]-(cn:CrimeNumber)-[o:OCCURRED_ON]->(y:Year)
+WITH n, y.year AS year, o.month AS month, COUNT(cn) AS crimeCount
+ORDER BY year, crimeCount DESC
+WITH n, year, COLLECT({month: month, crimeCount: crimeCount}) AS monthlyCrimeCounts
+WITH n, year, monthlyCrimeCounts[0] AS highest, monthlyCrimeCounts[-1] AS lowest
+RETURN n.neighborhood AS neighborhood, year,
+       highest.month AS highestMonth, highest.crimeCount AS highestCrimeCount,
+       lowest.month AS lowestMonth, lowest.crimeCount AS lowestCrimeCount
+
+
+/*
+Results for the first 5:
+"Midtown"	"2009"	"April"	3	"May"	1
+"Midtown"	"2010"	"October"	3	"January"	1
+"Midtown"	"2011"	"December"	3	"June"	1 
+"Midtown"	"2012"	"June"	3	"October"	1
+"Midtown"	"2013"	"October"	3	"March"	1
+*/
+
+/*
+7. Find the top property type associated with each crime type in a specified neighborhood.
+*/
+
+MATCH (n:Neighborhood {neighborhood: 'Midtown'})
+WITH n
+MATCH (n)<-[:IN_NEIGHBORHOOD]-(cn:CrimeNumber)-[hci:HAS_CRIME_INFO]->(ci:Crime_Info)
+WITH n, ci.crime AS crime, cn, hci
+WITH n, crime, hci.type AS propertyType, count(*) AS count
+ORDER BY crime, count DESC
+WITH n, crime, collect({propertyType: propertyType, count: count})[0] AS topPropertyType
+RETURN n.neighborhood AS neighborhood, crime, topPropertyType.propertyType AS topPropertyType, topPropertyType.count AS count
+ORDER BY crime
+
+/*
+"Midtown"	"AUTO THEFT"	"house_number"	4
+"Midtown"	"BURGLARY-NONRES"	"house_number"	2
+"Midtown"	"BURGLARY-RESIDENCE"	"house_number"	1
+"Midtown"	"LARCENY-FROM VEHICLE"	"house_number"	20
+"Midtown"	"LARCENY-NON VEHICLE"	"house_number"	6
+*/

@@ -1,0 +1,70 @@
+/*
+CITS3401 Project 2 
+Name: Nicodemus Ong
+Student Number: 22607943
+
+*** Queries for generating crime graph database
+
+*/
+
+/*
+Remove all nodes in the graph to generate a new graph to avoid any unwanted error or conficts
+*/
+
+match (n) detach delete (n);
+
+/*
+Create and load nodes from dimensional table's CSV's that has been processed by the ETL python script
+Note: Please ensure that all CSV's are in the correct folder for import as well as having the correct names as to avoid errors 
+*/
+
+LOAD CSV WITH HEADERS FROM 'file:///DimCrime.csv' AS row
+WITH DISTINCT row.crime AS crime, row.Severity AS severity
+CREATE (ci:Crime_Info {
+  crime: crime,
+  Severity: severity
+});
+
+LOAD CSV WITH HEADERS FROM 'file:///DimDate.csv' AS row
+WITH DISTINCT row.year AS year
+CREATE (y:Year {
+  year: year
+});
+
+LOAD CSV WITH HEADERS FROM 'file:///DimNPU.csv' AS row
+CREATE (n:Neighborhood {
+  NEIGHBORHOOD_ID: row.NPU_ID,
+  neighborhood: row.neighborhood
+});
+
+LOAD CSV WITH HEADERS FROM 'file:///DimStreet.csv' AS row
+CREATE (s:Street {
+  STREET_ID: row.STREET_ID,
+  street: row.street
+});
+
+LOAD CSV WITH HEADERS FROM 'file:///DimZone.csv' AS row
+CREATE (b:Beat {
+  BEAT_ID: row.ZONE_ID,
+  beat: row.beat
+});
+
+/*
+Load in the fact table to create the CrimeNumber nodes as well as create the relationships between the other nodes that has been created
+*/
+
+LOAD CSV WITH HEADERS FROM 'file:///FactCrime.csv' AS row
+MERGE (cn:CrimeNumber {crimenumber: row.number})
+WITH cn, row
+
+MATCH (ci:Crime_Info {crime: row.crime})
+MATCH (y:Year {year: row.year})
+MATCH (n:Neighborhood {NEIGHBORHOOD_ID: row.NPU_ID})
+MATCH (s:Street {STREET_ID: row.STREET_ID})
+MATCH (b:Beat {BEAT_ID: row.ZONE_ID})
+
+MERGE (cn)-[:HAS_CRIME_INFO {type: row.type}]->(ci)
+MERGE (cn)-[:OCCURRED_ON {date: row.date, month:row.month, quarter:row.quarter}]->(y)
+MERGE (cn)-[:IN_NEIGHBORHOOD {npu: row.npu}]->(n)
+MERGE (cn)-[:ON_STREET]->(s)
+MERGE (cn)-[:IN_BEAT {zone: row.zone}]->(b);

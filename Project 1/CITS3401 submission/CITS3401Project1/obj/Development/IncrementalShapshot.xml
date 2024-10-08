@@ -1,0 +1,110 @@
+﻿<DeploymentSnapshot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0">
+  <Target>
+    <Database>CITS3401Project1</Database>
+    <Server>labsql.csse.uwa.edu.au\UG_22607943</Server>
+    <ConnectionString>Data Source=labsql.csse.uwa.edu.au\UG_22607943;Timeout=0</ConnectionString>
+  </Target>
+  <Options>
+    <TransactionalDeployment>false</TransactionalDeployment>
+    <PartitionDeployment>DeployPartitions</PartitionDeployment>
+    <RoleDeployment>DeployRolesRetainMembers</RoleDeployment>
+    <ProcessingOption>DoNotProcess</ProcessingOption>
+    <OutputScript></OutputScript>
+    <ImpactAnalysisFile></ImpactAnalysisFile>
+    <ConfigurationSettingsDeployment>Deploy</ConfigurationSettingsDeployment>
+    <OptimizationSettingsDeployment>Deploy</OptimizationSettingsDeployment>
+    <WriteBackTableCreation>UseExisting</WriteBackTableCreation>
+  </Options>
+  <Snapshot>
+    <ObjectSnapshots>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.RelationalDataSource</Type>
+        <TimeStamp>VJWHJS4hvFRB8HmzqS7WyMm8mNU=23/04/2023 1:44:12 PM20/04/2023 1:17:37 PM</TimeStamp>
+        <ID>
+          <String>CITS3401-2023-1 22607943 Project1</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.DataSourceView</Type>
+        <TimeStamp>Bh+ZQf5m3A68KihhGei4BQV8QjA=20/04/2023 1:17:58 PM20/04/2023 1:17:58 PM</TimeStamp>
+        <ID>
+          <String>CITS3401-2023-1 22607943 Project1</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.DataSourceView</Type>
+        <TimeStamp>ZBR8mEBMZmuCSRGmuHu9Fy/Q8eE=22/04/2023 5:08:17 PM22/04/2023 5:07:10 PM</TimeStamp>
+        <ID>
+          <String>CITS3401-2023-1 22607943 Project1 MINING</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>iWH8mCwINh+AnhJhT8p8NTt9//g=20/04/2023 1:42:20 PM20/04/2023 1:19:15 PM</TimeStamp>
+        <ID>
+          <String>Zone</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>zLsreh5vWSkHXS4NRWRrjRypHPg=20/04/2023 1:43:29 PM20/04/2023 1:19:15 PM</TimeStamp>
+        <ID>
+          <String>Crime</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>ikz0dFCqnwEaON8hBlyDupQSwAI=20/04/2023 1:45:16 PM20/04/2023 1:19:15 PM</TimeStamp>
+        <ID>
+          <String>NPU</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>yEkXAVU594qp2ZQSfqt9CX+MIWE=20/04/2023 1:46:19 PM20/04/2023 1:19:15 PM</TimeStamp>
+        <ID>
+          <String>Street</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>A5bTMJ35IknGai2A7+9zBhsQtfk=20/04/2023 1:55:02 PM20/04/2023 1:19:15 PM</TimeStamp>
+        <ID>
+          <String>Date</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Cube</Type>
+        <TimeStamp>prWKD2B/Hq8BrWu0PlCzaYqmScA=20/04/2023 2:20:22 PM20/04/2023 1:19:15 PMCBe/znU0tMvAUEd9zAvtHHw6PnI=20/04/2023 1:19:15 PM20/04/2023 1:19:15 PM</TimeStamp>
+        <ID>
+          <String>CITS3401-2023-1 22607943 Project1</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.MiningStructure</Type>
+        <TimeStamp>WHSG7CniFO1moidbTIRONvjNIDs=22/04/2023 5:09:44 PM22/04/2023 5:09:44 PM</TimeStamp>
+        <ID>
+          <String>v Case Table</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.MiningStructure</Type>
+        <TimeStamp>6te5QOVibjylypNOj7rwqt/xr8s=23/04/2023 8:47:00 PM23/04/2023 8:46:59 PM</TimeStamp>
+        <ID>
+          <String>CRIMES RULE MINING</String>
+        </ID>
+      </ObjectSnapshot>
+    </ObjectSnapshots>
+    <DatabaseSnapshot>
+      <Type>Microsoft.AnalysisServices.Database</Type>
+      <TimeStamp>EW6m5riU0PTrKllxLg6OpnHi+js=20/04/2023 1:14:51 PM20/04/2023 1:14:51 PM</TimeStamp>
+      <ID>
+        <String>CITS3401Project1</String>
+      </ID>
+    </DatabaseSnapshot>
+    <Granularity>Coarse</Granularity>
+  </Snapshot>
+  <AssemblyLocations />
+  <ProcessingComplete>true</ProcessingComplete>
+  <LastDeployed>2023-04-23T12:47:43.003333Z</LastDeployed>
+</DeploymentSnapshot>

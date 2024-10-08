@@ -1,0 +1,558 @@
+STREET_ID,street
+1,Mayson Turner Road Northwest
+2,Martin Luther King Junior Drive Southwest
+3,McDaniel Street Southwest
+4,Baker Road Northwest
+5,Harper Road Southeast
+6,Rosedale Road Northeast
+7,Cheshire Bridge Road
+8,Madrona Street Northwest
+9,Mount Zion Road Southwest
+10,Altoona Place Southwest
+11,West Peek Road Northwest
+12,Edgewood Avenue Northeast
+13,Oglethorpe Avenue Southwest
+14,Carmia Way
+15,Hosea L Williams Drive Southeast
+16,Myrtle Street Northeast
+17,Flora Avenue Northeast
+18,Martin Luther King Jr Drive Southwest
+19,Stillman Street Southeast
+20,Parc Lane Southwest
+21,Arno Drive Northwest
+22,Loomis Avenue Southeast
+23,Thornton Place Southwest
+24,Glenview Circle Southwest
+25,Ponce de Leon Avenue Northeast
+26,Sunset Avenue Northwest
+27,Mitchell Street Southwest
+28,East Shadowlawn Avenue Northeast
+29,Casplan Street Southwest
+30,Oak Drive Southwest
+31,Wadley Street Northwest
+32,Howell Place Southwest
+33,Marietta Street Northwest
+34,Thornton Street Southwest
+35,Kimberly Way Southwest
+36,Woodland Avenue Southeast
+37,Donnelly Avenue Southwest
+38,Bellview Avenue Northwest
+39,Bowen Circle Southwest
+40,Hutchens Road Southeast
+41,College Avenue Northeast
+42,Walnut Street Southwest
+43,Monroe Drive Northeast
+44,Valleydale Drive Southwest
+45,Atlantic Drive Northwest
+46,West Peachtree Street Northwest
+47,Candler Road Southeast
+48,St Charles Avenue Northeast
+49,Peachtree Street Southwest
+50,Northside Circle Northwest
+51,Peachtree Road
+52,Moury Avenue Southwest
+53,Ellis Street Northeast
+54,Moreland Avenue Northeast
+55,Park Avenue Southeast
+56,Jonesboro Road Southeast
+57,Upshaw Street Southwest
+58,Sanderson Street Northeast
+59,Etheridge Court Apts
+60,Pryor Street
+61,Springdale Circle Southwest
+62,Holderness Street Southwest
+63,New Town Circle Southeast
+64,Sylvan Road
+65,Niskey Lake Road Southwest
+66,Constitution Road Southeast
+67,West End Place Southwest
+68,New Street Northeast
+69,Lakewood Avenue Southeast
+70,Northside Drive Northwest
+71,Glengary Drive Northeast
+72,Peters Street Southwest
+73,John Portman Boulevard Northwest
+74,Campbellton Road
+75,Pryor Street Southwest
+76,Smith Street Southwest
+77,Howell Mill Road Northwest
+78,Erin Avenue Southwest
+79,Fox Street Northwest
+80,Lenox Road Northeast
+81,Flat Shoals Avenue Southeast
+82,Cordova Street Southwest
+83,Glenn Street Southeast
+84,Etheridge Drive Northwest
+85,Sells Avenue Southwest
+86,Beckwith Court Southwest
+87,Chattahoochee Avenue Northwest
+88,Joseph E. Boone Boulevard Northwest
+89,Leslie Street Southeast
+90,Defoors Ferry Road Northwest
+91,Arlington Avenue Southwest
+92,Mays Court Southwest
+93,Main Street Northwest
+94,Atlanta BeltLine Westside Interim Hiking Trail
+95,Roxboro Road
+96,Hills Place Northwest
+97,Mills Street Northwest
+98,Rockport Place Southwest
+99,Harris Trail Northwest
+100,Browns Mill Road
+101,Oleander Street Northwest
+102,14th Street Northeast
+103,Waterford Road Northwest
+104,Lanier Drive Southwest
+105,Market Street Northwest
+106,Peachtree Road Northeast
+107,Marietta Boulevard Northwest
+108,Lucile Avenue Southwest
+109,Peyton Road Southwest
+110,Burbank Drive Northwest
+111,Washington Street Southwest
+112,Martin Street Southeast
+113,Hank Aaron Drive Southwest
+114,Commerce Drive Northwest
+115,Perkerson Road Southwest
+116,Fairburn Road Southwest
+117,Holly Road Northwest
+118,Rex Avenue Southwest
+119,Boulevard Southeast
+120,Thurmond Street Northwest
+121,Edwards Drive Northwest
+122,Southtowne PATH Trail
+123,Highland Avenue Northeast
+124,Bonnie Lane Southeast
+125,Caroline Street Northeast
+126,Pineland Road Northwest
+127,Westmont Road Southwest
+128,Peeples Street Southwest
+129,Oakland Lane Southwest
+130,Clifton Street Southeast
+131,Willard Avenue Southwest
+132,Ralph David Abernathy Boulevard
+133,Crew Street Southwest
+134,Princeton Lakes Parkway
+135,Maple Drive Northeast
+136,Moreland Drive Southeast
+137,May Avenue Southeast
+138,Oliver Street Northwest
+139,Whitehall Street Southwest
+140,Walker Street Southwest
+141,Maynard Terrace Southeast
+142,Andrews Drive Northwest
+143,Beverly Place Northwest
+144,Gillette Avenue Southwest
+145,Faulkner Road Northeast
+146,Peachtree Street Northeast
+147,Memorial Drive Southeast
+148,Berne Street Southeast
+149,Headland Drive Southwest
+150,I 85
+151,Oakland Terrace Southwest
+152,Polar Rock Road Southwest
+153,Lincoln Court Northwest
+154,Metropolitan Parkway Southwest
+155,Wylie Street Southeast
+156,Argus Circle Northwest
+157,Detroit Avenue Northwest
+158,Berkshire Road Northeast
+159,Oak Street Southwest
+160,Grand Avenue Southwest
+161,Buckeye Street Southwest
+162,North Avenue Northwest
+163,Mead Street Southeast
+164,Campbellton Road Southwest
+165,Interim BeltLine Northeast Trail
+166,Mercer Street Southeast
+167,Carey Drive Southeast
+168,Formwalt Street Southwest
+169,Cascade Road
+170,Baywood Drive Southeast
+171,Landrum Drive Southwest
+172,Luckie Street Northwest
+173,12th Street Northeast
+174,Fairlane Drive Southeast
+175,Tell Road Southwest
+176,Custer Avenue Southeast
+177,Linda Way Southwest
+178,Amsterdam Avenue Northeast
+179,Walton Street Northwest
+180,Santa Barbara Drive Northwest
+181,West Wieuca Road Northwest
+182,Polar Rock Terrace Southwest
+183,Parsons Street Southwest
+184,Eastridge Road Southwest
+185,Oakdale Road Northeast
+186,Stafford Street Northwest
+187,Mims Street Southwest
+188,Menlo Drive Northwest
+189,Mayflower Avenue Southwest
+190,Broad Street Southwest
+191,Charlotte Place Northwest
+192,Myrtle Drive Southwest
+193,Piedmont Avenue Northeast
+194,Gilmer Street Southeast
+195,Sparks Street Southwest
+196,Argonne Avenue Northeast
+197,Seaboard Industrial Boulevard Northwest
+198,10th Street Northwest
+199,Jones Avenue Northwest
+200,Defoor Avenue Northwest
+201,Cunningham Place Southwest
+202,Peachtree Center Avenue Northeast
+203,Macon Drive Southeast
+204,Penn Avenue Northeast
+205,Means Street Northwest
+206,Thomasville Boulevard Southeast
+207,Linden Avenue Northeast
+208,Ridgewood Road Northwest
+209,17th Street Northwest
+210,Belmonte Drive Southwest
+211,Williams Street Northwest
+212,Avon Avenue Southwest
+213,North Ormewood Park Drive Southeast
+214,Elm Street Northwest
+215,West Paces Ferry Road Northwest
+216,Richardson Road Northwest
+217,Loridans Drive Northeast
+218,Harwell Street Northwest
+219,Glenwood Avenue Southeast
+220,Ormond Street Southeast
+221,Hampton Street Northwest
+222,Skylofts Atlanta
+223,Ensley Street Northeast
+224,Doral Court Southwest
+225,White Street Southwest
+226,North Highland Avenue Northeast
+227,Woodson Street Southeast
+228,Montag Circle
+229,Ira Street Southwest
+230,Alabama Street Southwest
+231,Braeburn Drive Southeast
+232,North Avenue Northeast
+233,Piedmont Circle Northeast
+234,Lake Avenue Northeast
+235,Fielding Lane Southwest
+236,Collier Drive Northwest
+237,East Rhinehill Road Southeast
+238,Courtland Street Northeast
+239,Northside Drive Southwest
+240,Woodward Avenue Southeast
+241,Blair Villa Drive Southeast
+242,Cantrell Road Northeast
+243,Dutch Valley Place Northeast
+244,Ard Place Northwest
+245,Peachtree Walk Northeast
+246,Washita Avenue Northeast
+247,Milton Avenue Southeast
+248,Ora Avenue Southeast
+249,Glenwood Place Southeast
+250,Jackson Street Northeast
+251,Harwell Place Northwest
+252,Griffin Street Northwest
+253,Auburn Avenue Northeast
+254,Pulliam Street Southwest
+255,Piedmont Road Northeast
+256,Lang Drive Southwest
+257,Edwina Lane Southwest
+258,Chappell Road Southwest
+259,Parkway Drive Northeast
+260,Pelham Street Northwest
+261,Spad Avenue Northwest
+262,Moreland Avenue Southeast
+263,Western Avenue Northwest
+264,Deckner Avenue Southwest
+265,Vine Street Northwest
+266,Laurelwood Drive Southwest
+267,Camilla Street Southwest
+268,Cross Creek Parkway Northwest
+269,Benteen Park Drive Southeast
+270,Dolphin Drive Southwest
+271,Hollywood Road Northwest
+272,Donald Lee Hollowell Parkway Northwest
+273,Centennial Olympic Park Drive Southwest
+274,Hilburn Drive
+275,Elleby Road Southeast
+276,Rockhaven Circle Northeast
+277,17 1/2 Street
+278,Handley Avenue Southwest
+279,Jesse Hill Junior Drive Southeast
+280,Nolan Street Southeast
+281,Pharr Court S Northwest
+282,Palmetto Avenue Southwest
+283,North Grand Avenue Northwest
+284,Cleveland Avenue Southwest
+285,West Peachtree Place Northwest
+286,Ted Turner Drive Northwest
+287,Garibaldi Street Southwest
+288,Decatur Street Southeast
+289,Kennolia Drive Southwest
+290,Bluefield Drive Southwest
+291,Arbor Gates Drive
+292,Graymont Drive Southwest
+293,Blackland Road Northwest
+294,Spring Techwood Connector
+295,Harwell Road Northwest
+296,Hobart Drive Northwest
+297,Plaza Lane Southwest
+298,Baker Street Northeast
+299,Fortress Avenue Southwest
+300,Marietta Street
+301,Watkins Street Northwest
+302,Oakland Drive Southwest
+303,Thirkeld Avenue Southeast
+304,Spring Street Northwest
+305,Crescendo Drive Northwest
+306,Katherwood Drive Southwest
+307,Grass Valley Road Southwest
+308,Peyton Place Southwest
+309,Norwood Avenue Northeast
+310,Lindbergh Way NE
+311,The Fontainebleau Southwest
+312,Westchester Boulevard Northwest
+313,Argyle Drive Northwest
+314,Rogers Avenue Southwest
+315,Riverly Place Northwest
+316,Jett Street Northwest
+317,Alison Court Southwest
+318,Burchill Street
+319,Sorrento Circle Southwest
+320,East Ontario Avenue Southwest
+321,Ashby Grove Southwest
+322,Grant Terrace Southeast
+323,Benning Place Northeast
+324,Racine Street Southwest
+325,Whetstone Creek PATH Trail
+326,Francis Place Northwest
+327,Richland Road Southwest
+328,Benjamin E Mays Drive Southwest
+329,West Avenue Southwest
+330,Mount Zion Road Southeast
+331,Bolton Road Northwest
+332,Brewer Boulevard Southwest
+333,Benteen Avenue Southeast
+334,Glenaire Walk
+335,Carmain Drive Northeast
+336,7th Street Northeast
+337,Woodmere Drive Northwest
+338,Main Street
+339,7th Street Southwest
+340,South Avenue Southeast
+341,Rhodenhaven Drive Northwest
+342,Garden Walk
+343,Hall Street Northwest
+344,Central Avenue Southwest
+345,16th Street Northwest
+346,Roswell Road Northeast
+347,Dodson Drive Southwest
+348,Bolton Road
+349,Allegheny Street Southwest
+350,Lakeview Avenue Northeast
+351,Allene Avenue Southwest
+352,Newport Street Northwest
+353,Archer Way Northwest
+354,9th Street Northeast
+355,Adamsville Drive Southwest
+356,Hightower Road Northwest
+357,Forsyth Street Northwest
+358,Vera Street Southeast
+359,Darlington Circle Northeast
+360,Vine Street Southwest
+361,Sterling Street Southeast
+362,Cone Street Northwest
+363,Clifton Road Southeast
+364,Parc Court Southwest
+365,Holly Street Northwest
+366,Bromack Drive Southeast
+367,Spencer Street Northwest
+368,Seminole Avenue Northeast
+369,Hilliard Street Southeast
+370,Peyton Road Northwest
+371,Fair Street Southwest
+372,4th Street Northeast
+373,Lee Street Southwest
+374,Camp Creek Parkway
+375,Spink Street Northwest
+376,Tower Place Drive
+377,Brookdale Drive Northwest
+378,Land O Lakes Drive Northeast
+379,Pharr Road Northeast
+380,Goddard Street Southeast
+381,Atlanta BeltLine Eastside Trail
+382,Whiting Street Northwest
+383,Sandys Lane Southeast
+384,Culberson Street Southwest
+385,Prichard Way Northeast
+386,State Street Northwest
+387,Bradley Street Southeast
+388,La France Street Northeast
+389,Amber Place Northwest
+390,West Lake Court Northwest
+391,Dixie Avenue Northeast
+392,28th Street Northwest
+393,Vermont Road Northeast
+394,West Marietta Street Northwest
+395,Virginia Avenue Northeast
+396,Barge Road Southwest
+397,Herring Road Southwest
+398,West Shadowlawn Avenue Northeast
+399,Townsend Place
+400,Lakewood Way Southwest
+401,Capitol Avenue Southwest
+402,Morosgo Drive Northeast
+403,West Kildare Avenue Northwest
+404,McDonough Boulevard Southeast
+405,Bernina Avenue Northeast
+406,Bradbury Street Southwest
+407,Glenn Street Southwest
+408,Lakewood Avenue Southwest
+409,3rd Street Northeast
+410,Southside Park MTB - Oak Trail
+411,Bollingbrook Drive Southwest
+412,8th Street Northeast
+413,Center Street Northwest
+414,Simon Street Southeast
+415,Andrews Street Northwest
+416,Austin Avenue Northeast
+417,Conley Road Southeast
+418,Nash Road Northwest
+419,Chappell Road Northwest
+420,Atlanta Avenue Southeast
+421,Andrew Young International Boulevard Northeast
+422,Southside Park MTB - Evergreen Trail
+423,4th Street Northwest
+424,Eva Davis Way Southeast
+425,Rena Circle Southwest
+426,Lakewood Terrace Southeast
+427,Celeste Lane
+428,Fletcher Street Southwest
+429,Trinity Avenue Southwest
+430,Browning Street Southwest
+431,Lanier Street Northwest
+432,Little Street Southeast
+433,Peachtree Hills Avenue Northeast
+434,Woodlawn Avenue Northwest
+435,Arno Court Northwest
+436,Salmon Avenue Southeast
+437,Bonaventure Avenue Northeast
+438,Dill Avenue Southwest
+439,Almont Drive Southwest
+440,Joseph E. Lowery Boulevard
+441,University Avenue
+442,Hemphill School Road Northwest
+443,McDonald Street Southeast
+444,Beeler Drive Southwest
+445,Athens Avenue Southwest
+446,Simpson Street Northwest
+447,Epworth Street Southwest
+448,Revere Road Southwest
+449,14th Street Northwest
+450,Winfield Court Soiuthwest
+451,West Wesley Road Northwest
+452,East Wesley Road
+453,Richardson Street Southwest
+454,Camden Road Northeast
+455,Astor Avenue Southwest
+456,Sims Street Southwest
+457,Edgefield Drive Southwest
+458,Vineyards Drive Southeast
+459,Wyndham Way
+460,Ellsworth Industrial Drive Northwest
+461,Watts Road Northwest
+462,Ralph David Abernathy Freeway
+463,Rhodesia Avenue Southeast
+464,Lionel Hampton PATH Trail
+465,Sidney Marcus Boulevard Northeast
+466,Bill Lucas Drive Southeast
+467,Forrest Circle Southeast
+468,Howard Street Northeast
+469,Lenox Road
+470,Field Street Southeast
+471,Carroll Street Southeast
+472,Verdant Drive Southwest
+473,Tiger Flowers Drive Northwest
+474,Oak Knoll Terrace Southeast
+475,Olympian Way Southwest
+476,Hooper Street Southeast
+477,Beecher Road Southwest
+478,Hills Avenue Northwest
+479,University Avenue Southwest
+480,Adkins Road Northwest
+481,Beckwith Street Southwest
+482,Bixby Street Southeast
+483,Richmond Street Southeast
+484,Conrad Avenue Southeast
+485,Defoor Hills Road Northwest
+486,St Johns Avenue Southwest
+487,Level Ridge Road Southeast
+488,Dale Lane Southwest
+489,Fairburn Road
+490,Deerborne Court Southwest
+491,Merritts Avenue Northeast
+492,Kendrick Avenue Southeast
+493,McMillan Street Northwest
+494,Susan Lane Southwest
+495,Lynhurst Drive Southwest
+496,Hallman Street Northeast
+497,Pearce Street Southwest
+498,Redford Drive Southeast
+499,Deering Road Northwest
+500,Verbena Street Northwest
+501,Glenlock Circle
+502,Nelson Street Southwest
+503,Lindbergh Place Northeast
+504,Langston Avenue Southwest
+505,Sherwood Road Northeast
+506,T. Harvey Mathis Parkway
+507,Ogden Street Southwest
+508,Mayland Avenue Southwest
+509,Trolley Line Trail
+510,McWilliams Road
+511,Mobley Drive Southeast
+512,Bonneville Terrace Northwest
+513,Kirkwood Avenue Southeast
+514,26th Street Northwest
+515,Quaker Street Southwest
+516,1st Avenue Southwest
+517,Browns Mill Road Southeast
+518,Euclid Avenue Northeast
+519,Portman PATH
+520,Westview Drive Southwest
+521,Fulton Street Southwest
+522,PATH400
+523,Bishop Street Northwest
+524,I 20
+525,Baker Ridge Drive Northwest
+526,25th Street Northwest
+527,Fern Avenue Southeast
+528,Northside Parkway Northwest
+529,Liberty Parkway Northwest
+530,Imperial Circle Southwest
+531,Elizabeth Street Northeast
+532,Lois Place Northwest
+533,Lenox Park Boulevard Northeast
+534,Venetian Drive Southwest
+535,Old Hapeville Road Southwest
+536,Jewel Drive
+537,Collum Street Northwest
+538,Marietta Road Northwest
+539,Graham Street Southwest
+540,Baker Street Northwest
+541,Waits Avenue Southwest
+542,High Falls Court Southwest
+543,15th Street Northeast
+544,Peachtree Street
+545,Roswell Road
+546,13th Street Northeast
+547,Meadowbrook Drive Northeast
+548,Logan Lane Southwest
+549,Amal Drive Southwest
+550,Kipling Street Southeast
+551,Beecher Street Southwest
+552,11th Street Northeast
+553,Kilburn Drive Northeast
+554,Huff Road Northwest
+555,3rd Avenue Southeast
+556,Dearborn Street Southeast
+557,Ralph McGill Boulevard Northeast
